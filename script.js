@@ -27,8 +27,6 @@ function renderData(result){
     const userFollowing = document.querySelector('[data-following]');
     const userLocation = document.querySelector('[data-user-location]');
 
-
-    
     userImg.src = `${result.avatar_url}`
     userDataName.innerText = `${result?.name}`;
     userDate.innerText = `${result?.created_at.split('T')?.[0]}`
