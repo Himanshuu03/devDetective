@@ -4,3 +4,134 @@
     padding: 0;
     font-family: sans-serif;
 }
+body{
+    background-color:#f6f8ff;
+}
+.wrapper{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputPlaceHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fefefe;
+    border-radius: .5rem;
+    box-shadow:0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+    width:700px ;
+}
+.inputPlaceHolder input{
+    all: unset;
+    border: none;
+    font-size: 20px;
+    width: 450px;
+    margin: 1rem;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+.inputPlaceHolder button{
+    all: unset;
+    border: 1px solid black;
+    padding: 11px 20px;
+    border-radius: .5rem;
+    color: #fefefe;
+    opacity: 75%;
+    background-color: blue;
+    font-weight: 600;
+}
+.inputPlaceHolder input::placeholder{
+    color: black;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+.user-data{
+    padding: 11px 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fefefe;
+    border-radius: .5rem;
+    box-shadow:0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+    width:700px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.user-data .logo img{
+    border-radius: 50%;
+}
+.data{
+    margin-left: 4rem;
+}
+.user{
+    display: flex;
+    font-size: 25px;
+    width: 420px;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 2px;
+    line-height: 2rem;
+}
+.user .userData{
+    font-size: 18px;
+}
+.userLink{
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 2rem;
+}
+.userdesp{
+    margin:1rem 0;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 1rem;
+    width: 400px;
+}
+.container-rff{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 350px;
+    padding: 20px 20px;
+    background-color: #f6f8ff;
+    border-radius: .5rem;
+    font-size: 18px;
+    margin-bottom:1rem ;
+    letter-spacing: 1.5px;
+    line-height: 1rem;
+}
+.container-rff .userrff p:nth-child(2){
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+.userLocation{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.error{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.error p{
+    text-transform: uppercase;
+    font-weight:600 ;
+    font-size: 22px;
+    color: rgba(232, 52, 52, 0.9);
+}
+.active{
+    display: flex;
+}
+
+
+
