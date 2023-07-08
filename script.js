@@ -1,5 +1,3 @@
-// let api = `https://api.github.com/users/${gitusername}`
-
 var getInputData = document.querySelector('[data-user-name]');
 var getInputDataBtn = document.querySelector('[data-search-user]');
 
@@ -13,7 +11,15 @@ getInputDataBtn.addEventListener('click',()=>{
 async function fetchDevData(){
     const api = await fetch(`https://api.github.com/users/${userName}`);
     const result = await api.json();
-    renderData(result);
+    if(result?.name === null){
+        document.querySelector('.user-data').classList.remove('active');
+        document.querySelector('.error').classList.add('active');
+    }
+    else{
+        document.querySelector('.user-data').classList.add('active');
+        document.querySelector('.error').classList.remove('active');
+        renderData(result);
+    }
 }
 
 function renderData(result){
@@ -29,12 +35,12 @@ function renderData(result){
 
     userImg.src = `${result.avatar_url}`
     userDataName.innerText = `${result?.name}`;
-    userDate.innerText = `${result?.created_at.split('T')?.[0]}`
-    userLink.innerText =`${result?.login}`;
+    userDate.innerText = `Joined ${result?.created_at.split('T')?.[0]}`
+    userLink.innerText =`@${result?.login}`;
     userLink.href =`${result?.html_url}`;
-    userDes.innerText =`${result?.bio}`
+    userDes.innerText =`Bio:${result?.bio}`
     userRepo.innerText =`${result?.public_repos}`
     userFollower.innerText =`${result?.followers}`
     userFollowing.innerText=`${result?.following}`
-    userLocation.innerText =`${result?.location}`
+    userLocation.innerText =`${result?.location}` 
 }
