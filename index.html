@@ -10,44 +10,52 @@
     <div class="wrapper">
         <div class="heading">
             <h1>Dev Detective</h1>
-            <p class="light">Light</p>
-            <p class="dark">Dark</p>
-            <img src="./assets/images/moon-icon.svg">
-            <img src="./assets/images/sun-icon.svg">
+            <!-- <div class="heading2">
+                <p class="light">Light</p>
+                <p class="dark">Dark</p>
+                <img src="./assets/images/moon-icon.svg">
+                <img src="./assets/images/sun-icon.svg">
+            </div> -->
         </div>
         <div class="inputPlaceHolder">
             <img src="./assets/images/search-icon.svg">
-            <input type="text" class="inputBox" data-user-name>
-            <button data-search-user>Search</button>
+            <input type="text" class="inputBox" placeholder="Enter a Github username.." data-user-name>
+            <button data-search-user type="submit">Search</button>
         </div>
         <div class="user-data">
             <div class="logo">
-                <img src="" data-img>
+                <img src="" data-img width="150px" height="150px">
             </div>
-            <div class="user">
-                <p class="name" data-name></p>
-                <p class="userData" data-date></p>
-            </div>
-            <a class="userLink" data-link></a>
-            <p class="userdesp" data-des></p>
-            <div class = "container-rff">
-                <div class ="userrff">
-                    <p>Repos</p>
-                    <p data-repo></p>
+            <div class="data">
+                <div class="user">
+                    <p class="name" data-name></p>
+                    <p class="userData" data-date></p>
                 </div>
-                <div class ="userrff">
-                    <p>Followers</p>
-                    <p data-follower></p>
+                <a class="userLink" data-link></a>
+                <p class="userdesp" data-des></p>
+                <div class = "container-rff">
+                    <div class ="userrff">
+                        <p>Repos</p>
+                        <p data-repo>0</p>
+                    </div>
+                    <div class ="userrff">
+                        <p>Followers</p>
+                        <p data-follower>0</p>
+                    </div>
+                    <div class ="userrff">
+                        <p>Following</p>
+                        <p data-following>0</p>
+                    </div>
                 </div>
-                <div class ="userrff">
-                    <p>Following</p>
-                    <p data-following></p>
+                <div class="userLocation">
+                    <img src="./assets/images/location-icon.svg" height="17px">
+                    <p data-user-location></p>
                 </div>
             </div>
-            <div class="userLocation">
-                <img src="./assets/images/location-icon.svg">
-                <p data-user-location></p>
-            </div>
+        </div>
+        <div class = "error">
+            <img src="./assets/images/not-found.png" width="400px">
+            <p>Enter write username</p>
         </div>
     </div>
     <script src="script.js"></script>
