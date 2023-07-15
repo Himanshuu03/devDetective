@@ -1,7 +1,8 @@
 var getInputData = document.querySelector('[data-user-name]');
 var getInputDataBtn = document.querySelector('[data-search-user]');
 
-var userName = "";
+var userName = "himanshuu03";
+fetchDevData();
 
 getInputDataBtn.addEventListener('click',()=>{
     userName = getInputData.value;
